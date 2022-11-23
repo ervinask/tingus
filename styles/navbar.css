@@ -1,0 +1,155 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 12rem;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar-logo img {
+  height: 50px;
+}
+
+.navbar-links ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.navbar-links ul li a:hover {
+  color: #756f63;
+}
+
+.burger-menu {
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 30px;
+}
+
+.burger-menu .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 7rem;
+  background-color: rgba(39, 37, 33, 1);
+}
+
+.footer-links ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  font-size: 1.4rem;
+  padding: 0;
+}
+
+.footer-links > ul > li > a {
+  color: black;
+  text-decoration: none;
+  color: #756f63;
+}
+
+.footer-links > ul > li > a:hover {
+  color: #cac9c8;
+}
+
+.footer-copyright {
+  color: #756f63;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    background: rgba(39, 37, 33, 1);
+    padding: 1rem 5rem;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-links ul {
+    padding: 0;
+    margin: 0;
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-links ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .burger-menu {
+    right: 1rem;
+  }
+}
